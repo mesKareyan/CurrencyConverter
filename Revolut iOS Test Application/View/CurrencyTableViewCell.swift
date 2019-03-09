@@ -19,13 +19,12 @@ class CurrencyTableViewCell: UITableViewCell {
 	
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+		iconImageView.layer.cornerRadius = iconImageView.bounds.width / 2.0;
+		iconImageView.clipsToBounds = true
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
     }
 	
 	func configure(for currency: CurrencyItem) {

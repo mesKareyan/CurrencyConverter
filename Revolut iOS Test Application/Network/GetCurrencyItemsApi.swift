@@ -63,6 +63,7 @@ class CurrencyItemsSerialaizer {
 				return []
 		}
 		return rates.map {key, value in CurrencyItem(abbreviation: key, rate: value)}
+			.sorted { $0.abbreviation < $1.abbreviation }
 	}
 	
 }

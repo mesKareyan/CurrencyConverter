@@ -18,7 +18,7 @@ protocol CurrencyListDataSourceDelegate: class {
 class CurrencyListDataSource: NSObject {
 	
 	var items:[CurrencyItem] = []
-	var selectedItem: CurrencyItem = CurrencyItem(abbreviation: "EUR", rate: 1)
+	var selectedItem: CurrencyItem = CurrencyItem(abbreviation: "EUR", rate: 1.0)
 	let api: GetCurrencyItemsApi
 	weak var delegate: CurrencyListDataSourceDelegate?
 	private var timer: Timer?
@@ -43,6 +43,7 @@ class CurrencyListDataSource: NSObject {
 										 selector: #selector(updatingLoop),
 										 userInfo: nil,
 										 repeats: true)
+			RunLoop.current.add(timer!, forMode: RunLoop.Mode.common)
 		}
 	}
 	
@@ -59,7 +60,8 @@ class CurrencyListDataSource: NSObject {
 				switch result {
 				case .failure(message: let errorMessage):
 					self.delegate?.currencyItemsUpdatingFailed(with: errorMessage)
-				case .success(with: let items):
+				case .success(with: var items):
+					items.insert(self.selectedItem, at: 0)
 					self.items = items
 					self.delegate?.currencyItemsUpdated()
 				}
