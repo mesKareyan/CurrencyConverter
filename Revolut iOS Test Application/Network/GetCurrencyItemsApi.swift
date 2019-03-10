@@ -62,7 +62,7 @@ class CurrencyItemsSerialaizer {
 			let rates = json?["rates"] as? [String: Double] else {
 				return []
 		}
-		return rates.map {key, value in CurrencyItem(abbreviation: key, rate: value)}
+		return rates.map {key, value in CurrencyItem(abbreviation: key, rate: value, value: 0)}
 			.sorted { $0.abbreviation < $1.abbreviation }
 	}
 	

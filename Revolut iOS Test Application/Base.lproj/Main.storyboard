@@ -40,18 +40,17 @@
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PdG-vC-gs7">
                                                     <rect key="frame" x="86" y="7" width="124" height="50"/>
                                                     <subviews>
-                                                        <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="Fsa-lJ-CRA">
-                                                            <rect key="frame" x="0.0" y="0.0" width="51" height="40.5"/>
-                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" baselineRelativeArrangement="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Fsa-lJ-CRA">
+                                                            <rect key="frame" x="0.0" y="0.0" width="124" height="50"/>
                                                             <subviews>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="EUR" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1qq-cj-eDo">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="51" height="27"/>
+                                                                    <rect key="frame" x="0.0" y="0.0" width="124" height="33"/>
                                                                     <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="24"/>
                                                                     <color key="textColor" red="0.12984204290000001" green="0.12984612579999999" blue="0.12984395030000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Euro" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gfD-JQ-PNi">
-                                                                    <rect key="frame" x="0.0" y="27" width="51" height="13.5"/>
+                                                                    <rect key="frame" x="0.0" y="17" width="124" height="33"/>
                                                                     <fontDescription key="fontDescription" style="UICTFontTextStyleCaption2"/>
                                                                     <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                     <nil key="highlightedColor"/>
@@ -61,7 +60,11 @@
                                                     </subviews>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <constraints>
+                                                        <constraint firstAttribute="bottom" secondItem="Fsa-lJ-CRA" secondAttribute="bottom" id="3iH-ri-Z60"/>
                                                         <constraint firstAttribute="width" constant="124" id="57d-6E-tND"/>
+                                                        <constraint firstItem="Fsa-lJ-CRA" firstAttribute="top" secondItem="PdG-vC-gs7" secondAttribute="top" id="Kfn-Mn-fzv"/>
+                                                        <constraint firstItem="Fsa-lJ-CRA" firstAttribute="leading" secondItem="PdG-vC-gs7" secondAttribute="leading" id="MHK-ks-LYd"/>
+                                                        <constraint firstAttribute="trailing" secondItem="Fsa-lJ-CRA" secondAttribute="trailing" id="TCs-8T-mNR"/>
                                                     </constraints>
                                                 </view>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="A3G-bQ-Cfi">

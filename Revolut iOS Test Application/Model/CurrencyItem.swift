@@ -11,6 +11,7 @@ import Foundation
 struct CurrencyItem {
 	let abbreviation: String
 	var rate: Double?
+	var value: Double?
 }
 
 

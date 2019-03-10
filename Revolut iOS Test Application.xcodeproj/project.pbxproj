@@ -19,6 +19,7 @@
 		B2C78A772232EAB7000B5AB0 /* CurrencyItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2C78A762232EAB7000B5AB0 /* CurrencyItem.swift */; };
 		B2C78A7A2232EE5B000B5AB0 /* Api.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2C78A792232EE5B000B5AB0 /* Api.swift */; };
 		B2C78A7C22330424000B5AB0 /* GetCurrencyItemsApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2C78A7B22330424000B5AB0 /* GetCurrencyItemsApi.swift */; };
+		B2C78A8122346064000B5AB0 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2C78A8022346064000B5AB0 /* Router.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +58,7 @@
 		B2C78A762232EAB7000B5AB0 /* CurrencyItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyItem.swift; sourceTree = "<group>"; };
 		B2C78A792232EE5B000B5AB0 /* Api.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Api.swift; sourceTree = "<group>"; };
 		B2C78A7B22330424000B5AB0 /* GetCurrencyItemsApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetCurrencyItemsApi.swift; sourceTree = "<group>"; };
+		B2C78A8022346064000B5AB0 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,9 +111,9 @@
 			children = (
 				B2C78A782232EE4B000B5AB0 /* Network */,
 				B2C78A732232E97C000B5AB0 /* View */,
+				B2C78A7F22344B96000B5AB0 /* Controller */,
 				B2C78A702232D39A000B5AB0 /* Model */,
 				B265E2F42232CAF00020432B /* AppDelegate.swift */,
-				B265E2F62232CAF00020432B /* RatesListViewController.swift */,
 				B265E2F82232CAF00020432B /* Main.storyboard */,
 				B265E2FB2232CAF30020432B /* Assets.xcassets */,
 				B265E2FD2232CAF30020432B /* LaunchScreen.storyboard */,
@@ -162,6 +164,15 @@
 				B2C78A7B22330424000B5AB0 /* GetCurrencyItemsApi.swift */,
 			);
 			path = Network;
+			sourceTree = "<group>";
+		};
+		B2C78A7F22344B96000B5AB0 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				B265E2F62232CAF00020432B /* RatesListViewController.swift */,
+				B2C78A8022346064000B5AB0 /* Router.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -299,6 +310,7 @@
 				B2C78A752232E9AB000B5AB0 /* CurrencyTableViewCell.swift in Sources */,
 				B265E2F72232CAF00020432B /* RatesListViewController.swift in Sources */,
 				B2C78A722232E6BD000B5AB0 /* CurrencyListDataSource.swift in Sources */,
+				B2C78A8122346064000B5AB0 /* Router.swift in Sources */,
 				B2C78A7C22330424000B5AB0 /* GetCurrencyItemsApi.swift in Sources */,
 				B265E2F52232CAF00020432B /* AppDelegate.swift in Sources */,
 				B2C78A772232EAB7000B5AB0 /* CurrencyItem.swift in Sources */,
