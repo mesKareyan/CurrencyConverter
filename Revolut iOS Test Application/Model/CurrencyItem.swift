@@ -9,9 +9,15 @@
 import Foundation
 
 struct CurrencyItem {
-	let abbreviation: String
+	var abbreviation: String
 	var rate: Double?
 	var value: Double?
+}
+
+extension CurrencyItem: Equatable {
+	public static func == (lhs: CurrencyItem, rhs: CurrencyItem) -> Bool {
+		return lhs.abbreviation == rhs.abbreviation
+	}
 }
 
 

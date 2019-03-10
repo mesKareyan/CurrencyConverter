@@ -73,18 +73,39 @@ extension RatesListViewController: CurrencyTableViewCellEditingDelegate {
 	func currencyCellDidBeginEditing(at indexPath: IndexPath) {
 		if indexPath.section == 1 {
 			
+			listDataSource.stopUpdating()
+			
+			let top = IndexPath(row: 0, section: 0)
 			let oldSelected = listDataSource.selectedItem!
+			let newSelected = listDataSource.items[indexPath.row]
+			
+			var newItems = listDataSource.items
+			newItems.remove(at: indexPath.row)
+			newItems.append(oldSelected)
+			newItems.sort { $0.abbreviation < $1.abbreviation }
+			let oldSelectedItemIndex = newItems.firstIndex(of: oldSelected)!
+			
+			
+			tableView.beginUpdates()
+			
 			listDataSource.selectedItem = nil
-			tableView.reloadData()
+			tableView.deleteRows(at: [top], with: .automatic)
 			
-			let newSelected = listDataSource.items.remove(at: indexPath.row)
 			listDataSource.selectedItem = newSelected
-			tableView.moveRow(at: indexPath, to: IndexPath(row: 0, section: 0))
+			listDataSource.items.remove(at: indexPath.row)
+			tableView.moveRow(at: indexPath, to: top)
 			
-			listDataSource.items.insert(oldSelected, at: 1)
-			tableView.insertRows(at: [IndexPath(row: 0, section: 1)], with: .left)
-			//tableView.reloadData()
-			listDataSource.reloadData(notify: true)
+			listDataSource.items.insert(oldSelected, at: oldSelectedItemIndex)
+			tableView.insertRows(at: [IndexPath(row: oldSelectedItemIndex, section: 1)], with: .automatic)
+			
+			tableView.selectRow(at: top, animated: true, scrollPosition: .top)
+
+
+			tableView.endUpdates()
+			
+			listDataSource.startUpdating()
+		
+
 		}
 	}
 	

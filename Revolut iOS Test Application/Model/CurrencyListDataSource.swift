@@ -65,13 +65,15 @@ class CurrencyListDataSource: NSObject {
 	}
 	
 	@objc private func updatingLoop() {
+		guard let selectedItem = selectedItem else {
+			return
+		}
 		api.getItems(for: selectedItem) { result in
 			DispatchQueue.main.async {
 				switch result {
 				case .failure(message: let errorMessage):
 					self.delegate?.currencyItemsUpdatingFailed(with: errorMessage)
 				case .success(with: let items):
-					print(items.first!.rate)
 					self.updateData(with: items)
 				}
 			}
