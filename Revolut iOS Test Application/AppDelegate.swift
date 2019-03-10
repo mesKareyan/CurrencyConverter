@@ -16,7 +16,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 	func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
 		let navController = window?.rootViewController as! UINavigationController
 		let listController = navController.topViewController as! RatesListViewController
-		listController.listDataSource = CurrencyListDataSource(api: GetCurrencyItemsApi())
+		listController.dataProvider = CurrencyListDataSource(api: GetCurrencyItemsApi())
 		return true
 	}
 

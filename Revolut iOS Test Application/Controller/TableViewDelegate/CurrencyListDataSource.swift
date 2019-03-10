@@ -9,12 +9,16 @@
 import UIKit
 
 
-class CurrencyListDataSource: NSObject {
+class CurrencyListDataSource: NSObject, CurrencyListProvider {
 	
 	let api: GetCurrencyItemsApi
 	var items: [CurrencyItem] = []
 	private var timer: Timer?
-	weak var tableView:UITableView!
+	weak var tableView:UITableView! {
+		didSet {
+			tableView.dataSource = self
+		}
+	}
 	var selectedItem: CurrencyItem! = CurrencyItem(abbreviation: "EUR",
 												   rate: 1.0,
 												   value: 100.0)
