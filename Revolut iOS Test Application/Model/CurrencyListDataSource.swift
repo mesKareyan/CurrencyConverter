@@ -21,7 +21,9 @@ class CurrencyListDataSource: NSObject {
 	
 	let api: GetCurrencyItemsApi
 	var items:[CurrencyItem] = []
-	var selectedItem: CurrencyItem! = CurrencyItem(abbreviation: "EUR", rate: 1.0, value: 0.0)
+	var selectedItem: CurrencyItem! = CurrencyItem(abbreviation: "EUR",
+												   rate: 1.0,
+												   value: 100.0)
 	var tempItem: CurrencyItem!
 	
 	weak var delegate: CurrencyListDataSourceDelegate?
@@ -50,8 +52,8 @@ class CurrencyListDataSource: NSObject {
 										 target: self,
 										 selector: #selector(updatingLoop),
 										 userInfo: nil,
-										 repeats: false)
-			RunLoop.current.add(timer!, forMode: RunLoop.Mode.common)
+										 repeats: true)
+			RunLoop.current.add(timer!, forMode: RunLoop.Mode.default)
 		}
 	}
 	
@@ -69,6 +71,7 @@ class CurrencyListDataSource: NSObject {
 				case .failure(message: let errorMessage):
 					self.delegate?.currencyItemsUpdatingFailed(with: errorMessage)
 				case .success(with: let items):
+					print(items.first!.rate)
 					self.updateData(with: items)
 				}
 			}
@@ -77,7 +80,11 @@ class CurrencyListDataSource: NSObject {
 	
 	private func updateData(with items: [CurrencyItem], notify: Bool = true) {
 		self.items = items.map { item in
-			guard let selectedValue = self.selectedItem?.value, let rate = item.rate else { return item }
+			guard let selectedValue = self.selectedItem?.value, let rate = item.rate else {
+				var item = item
+				item.value = 0.0
+				return item
+			}
 			var item = item
 			item.value = selectedValue * rate
 			return item
@@ -98,7 +105,10 @@ extension CurrencyListDataSource: UITableViewDataSource {
 	}
 	
 	func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-		return section == 0 ? 1 : items.count
+		if section == 0 {
+			return selectedItem == nil ? 0 : 1
+		}
+		return items.count
 	}
 	
 	func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
