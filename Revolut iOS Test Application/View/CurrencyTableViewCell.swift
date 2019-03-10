@@ -9,11 +9,9 @@
 import UIKit
 
 protocol CurrencyTableViewCellEditingDelegate: AnyObject {
-	
-	func currencyCell(at indexPath: IndexPath, didChangeText text: String?)
-	func currencyCellDidBeginEditing(at indexPath: IndexPath)
-	func currencyCellDidEndEditing(at indexPath: IndexPath)
-	
+	func currencyCell(_ cell: CurrencyTableViewCell, didChangeText text: String?)
+	func currencyCellDidBeginEditing(_ cell: CurrencyTableViewCell)
+	func currencyCellDidEndEditing(_ cell: CurrencyTableViewCell)
 }
 
 class CurrencyTableViewCell: UITableViewCell {
@@ -25,7 +23,6 @@ class CurrencyTableViewCell: UITableViewCell {
 	@IBOutlet weak var bottomLineView: UIView!
 	
 	var item: CurrencyItem?
-	var indexPath: IndexPath!
 	weak var delegate: CurrencyTableViewCellEditingDelegate?
 	
 	private struct Colors {
@@ -41,10 +38,6 @@ class CurrencyTableViewCell: UITableViewCell {
 		rateTextField.addTarget(self, action: #selector(textFieldDidChange(_:)), for: .editingChanged)
 		rateTextField.delegate = self
     }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-    }
 	
 	func configure(for currency: CurrencyItem) {
 		item = currency
@@ -57,7 +50,7 @@ class CurrencyTableViewCell: UITableViewCell {
 	}
 	
 	@objc func textFieldDidChange(_ textField: UITextField) {
-		delegate?.currencyCell(at: indexPath, didChangeText: textField.text)
+		delegate?.currencyCell(self, didChangeText: textField.text)
 	}
 
 }
@@ -65,15 +58,12 @@ class CurrencyTableViewCell: UITableViewCell {
 extension CurrencyTableViewCell: UITextFieldDelegate {
 	
 	func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool {
-		if indexPath.section == 1 {
-			delegate?.currencyCellDidBeginEditing(at: indexPath)
-			return false
-		}
+		delegate?.currencyCellDidBeginEditing(self)
 		return true
 	}
 	
 	private func textFieldDidEndEditing(_ textField: UITextField) {
-		delegate?.currencyCellDidEndEditing(at: indexPath)
+		delegate?.currencyCellDidEndEditing(self)
 		bottomLineView.backgroundColor = Colors.deselectedColor
 	}
 	
@@ -84,6 +74,7 @@ extension CurrencyTableViewCell: UITextFieldDelegate {
 		return true;
 	}
 	func textFieldShouldEndEditing(_ textField: UITextField) -> Bool {
+		bottomLineView.backgroundColor = Colors.deselectedColor
 		return true;
 	}
 	func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
@@ -92,29 +83,11 @@ extension CurrencyTableViewCell: UITextFieldDelegate {
 		return newLength <= 10
 	}
 	func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+		bottomLineView.backgroundColor = Colors.deselectedColor
 		textField.resignFirstResponder();
 		return true;
 	}
 	
 }
 
-extension Double {
-	func setMinTailingDigits() -> String {
-		if self == 0.0 { return "" }
-		let formatter = NumberFormatter()
-		formatter.minimumFractionDigits = 2
-		return formatter.string(from: self as NSNumber)!
-	}
-}
-
-extension Optional where Wrapped == Double {
-	func setMinTailingDigits() -> String {
-		switch self {
-		case .none:
-			return ""
-		case .some(let value):
-			return value.setMinTailingDigits()
-		}
-	}
-}
 

@@ -8,11 +8,6 @@
 
 import Foundation
 
-private struct Endpoint {
-	private init() {}
-	static let base = "https://revolut.duckdns.org/latest"
-}
-
 enum CurrencyItemsRequestResult {
 	case success(with: [CurrencyItem])
 	case failure(message: String?)
@@ -23,7 +18,7 @@ class GetCurrencyItemsApi: Api {
 	
 	var resultSerialiser = CurrencyItemsSerialaizer()
 	
-	private struct ApiEndpoint {
+	private struct Endpoint {
 		private init() {}
 		static let base = "https://revolut.duckdns.org/latest"
 	}
@@ -41,7 +36,7 @@ class GetCurrencyItemsApi: Api {
 	}
 	
 	private func getItemsData(for currency:CurrencyItem, comletion: @escaping NetworkRequestComletion) {
-		var components = URLComponents(string: ApiEndpoint.base)!
+		var components = URLComponents(string: Endpoint.base)!
 		components.queryItems = [
 			URLQueryItem(name: "base", value: currency.abbreviation)
 		]

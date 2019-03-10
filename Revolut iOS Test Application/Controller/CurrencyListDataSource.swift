@@ -9,12 +9,9 @@
 import UIKit
 
 protocol CurrencyListDataSourceDelegate: AnyObject {
-	
-	func selectedItemUpdated(from indexPath: IndexPath)
-	func currencyItemsUpdated()
-	func currencyItemsUpdatingFailed(with error: String?)
+	func currencyItemsDidUpdated()
+	func currencyItemsUpdatingDidFailed(with error: String?)
 	var currencyCellDelegate: CurrencyTableViewCellEditingDelegate {get}
-	
 }
 
 class CurrencyListDataSource: NSObject {
@@ -72,7 +69,7 @@ class CurrencyListDataSource: NSObject {
 			DispatchQueue.main.async {
 				switch result {
 				case .failure(message: let errorMessage):
-					self.delegate?.currencyItemsUpdatingFailed(with: errorMessage)
+					self.delegate?.currencyItemsUpdatingDidFailed(with: errorMessage)
 				case .success(with: let items):
 					self.updateData(with: items)
 				}
@@ -92,7 +89,7 @@ class CurrencyListDataSource: NSObject {
 			return item
 		}
 		if notify {
-			self.delegate?.currencyItemsUpdated()
+			self.delegate?.currencyItemsDidUpdated()
 		}
 	}
 
@@ -122,7 +119,6 @@ extension CurrencyListDataSource: UITableViewDataSource {
 				currencyCell.configure(for: items[indexPath.row])
 			}
 			currencyCell.delegate = self.delegate?.currencyCellDelegate
-			currencyCell.indexPath = indexPath
 		}
 		return cell
 	}
