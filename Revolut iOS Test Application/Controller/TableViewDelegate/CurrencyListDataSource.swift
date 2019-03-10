@@ -8,31 +8,24 @@
 
 import UIKit
 
-protocol CurrencyListDataSourceDelegate: AnyObject {
-	func currencyItemsDidUpdated()
-	func currencyItemsUpdatingDidFailed(with error: String?)
-	var currencyCellDelegate: CurrencyTableViewCellEditingDelegate {get}
-}
 
 class CurrencyListDataSource: NSObject {
 	
 	let api: GetCurrencyItemsApi
-	var items:[CurrencyItem] = []
+	var items: [CurrencyItem] = []
+	private var timer: Timer?
+	weak var tableView:UITableView!
 	var selectedItem: CurrencyItem! = CurrencyItem(abbreviation: "EUR",
 												   rate: 1.0,
 												   value: 100.0)
-	var tempItem: CurrencyItem!
-	
-	weak var delegate: CurrencyListDataSourceDelegate?
-	private var timer: Timer?
 	
 	init(api: GetCurrencyItemsApi) {
 		self.api = api
 		super.init()
 	}
 	
-	func reloadData(notify: Bool = true) {
-		updateData(with: items, notify: notify)
+	func reloadData() {
+		updateData(with: items)
 	}
 	
 	func startUpdating() {
@@ -50,7 +43,7 @@ class CurrencyListDataSource: NSObject {
 										 selector: #selector(updatingLoop),
 										 userInfo: nil,
 										 repeats: true)
-			RunLoop.current.add(timer!, forMode: RunLoop.Mode.default)
+			RunLoop.current.add(timer!, forMode: RunLoop.Mode.common)
 		}
 	}
 	
@@ -69,7 +62,7 @@ class CurrencyListDataSource: NSObject {
 			DispatchQueue.main.async {
 				switch result {
 				case .failure(message: let errorMessage):
-					self.delegate?.currencyItemsUpdatingDidFailed(with: errorMessage)
+					print(errorMessage ?? "")
 				case .success(with: let items):
 					self.updateData(with: items)
 				}
@@ -77,7 +70,7 @@ class CurrencyListDataSource: NSObject {
 		}
 	}
 	
-	private func updateData(with items: [CurrencyItem], notify: Bool = true) {
+	private func updateData(with items: [CurrencyItem]) {
 		self.items = items.map { item in
 			guard let selectedValue = self.selectedItem?.value, let rate = item.rate else {
 				var item = item
@@ -88,11 +81,9 @@ class CurrencyListDataSource: NSObject {
 			item.value = selectedValue * rate
 			return item
 		}
-		if notify {
-			self.delegate?.currencyItemsDidUpdated()
-		}
+		//update UI
+		tableView.reloadSections(IndexSet(integer: 1), with: .none)
 	}
-
 }
 
 // MARK: - UITableViewDataSource
@@ -118,10 +109,12 @@ extension CurrencyListDataSource: UITableViewDataSource {
 			} else {
 				currencyCell.configure(for: items[indexPath.row])
 			}
-			currencyCell.delegate = self.delegate?.currencyCellDelegate
+			currencyCell.delegate = self
 		}
 		return cell
 	}
 	
 }
+
+
 

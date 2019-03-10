@@ -46,7 +46,7 @@ class CurrencyTableViewCell: UITableViewCell {
 			currancyNameLabel.text = currecyItem.countryName
 		}
 		currancyLabel.text = currency.abbreviation
-		rateTextField.text = currency.value.setMinTailingDigits()
+		rateTextField.text = currency.value.stringValue
 	}
 	
 	@objc func textFieldDidChange(_ textField: UITextField) {
