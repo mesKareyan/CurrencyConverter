@@ -8,8 +8,11 @@
 
 import UIKit
 
+protocol CurrencyListDelegateProtocol: AnyObject, UITableViewDelegate {
+}
+
 // MARK: - UITableViewDelegate
-class CurrencyListDelegate: NSObject, UITableViewDelegate {
+class CurrencyListDelegate: NSObject, CurrencyListDelegateProtocol {
 	func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
 		if let cell = tableView.cellForRow(at: indexPath) as? CurrencyTableViewCell {
 			cell.rateTextField.becomeFirstResponder()

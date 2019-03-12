@@ -13,7 +13,7 @@
         <!--Currency Converter-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="RatesListViewController" customModule="Revolut_iOS_Test_Application" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="RatesListViewController" id="BYZ-38-t0r" customClass="RatesListViewController" customModule="CurrencyConverterApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -23,7 +23,7 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="CurrencyCell" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="CurrencyCell" rowHeight="85" id="SGL-cJ-BAr" customClass="CurrencyTableViewCell" customModule="Revolut_iOS_Test_Application" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="CurrencyCell" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="CurrencyCell" rowHeight="85" id="SGL-cJ-BAr" customClass="CurrencyTableViewCell" customModule="CurrencyConverterApp" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="414" height="85"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="SGL-cJ-BAr" id="lbQ-BR-nWY">

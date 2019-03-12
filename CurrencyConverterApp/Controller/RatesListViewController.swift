@@ -18,7 +18,7 @@ class RatesListViewController: UIViewController {
 	
 	@IBOutlet weak var tableView: UITableView!
 	var dataProvider: CurrencyListProvider!
-	var listDelegate = CurrencyListDelegate()
+	var listDelegate: CurrencyListDelegateProtocol = CurrencyListDelegate()
 	var tapToHideKeyboardGesture: UITapGestureRecognizer?
 	
 	//MARK - Lifecycle
@@ -28,6 +28,10 @@ class RatesListViewController: UIViewController {
 		tableView.delegate = listDelegate
 		NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
 		NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
+	}
+
+	deinit {
+		NotificationCenter.default.removeObserver(self)
 	}
 	
 	override func viewWillAppear(_ animated: Bool) {
