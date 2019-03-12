@@ -7,13 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		11CA28982237A0B800F8BBFE /* ApiTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11CA28952237A02E00F8BBFE /* ApiTests.swift */; };
+		11CA289C2237D0FD00F8BBFE /* RateListViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11CA289B2237D0FD00F8BBFE /* RateListViewControllerTests.swift */; };
+		B22A0EBF223E916400FA7E76 /* CurrencyListDelegateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B22A0EBE223E916400FA7E76 /* CurrencyListDelegateTests.swift */; };
 		B265E2F52232CAF00020432B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B265E2F42232CAF00020432B /* AppDelegate.swift */; };
 		B265E2F72232CAF00020432B /* RatesListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B265E2F62232CAF00020432B /* RatesListViewController.swift */; };
 		B265E2FA2232CAF00020432B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B265E2F82232CAF00020432B /* Main.storyboard */; };
 		B265E2FC2232CAF30020432B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B265E2FB2232CAF30020432B /* Assets.xcassets */; };
 		B265E2FF2232CAF30020432B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B265E2FD2232CAF30020432B /* LaunchScreen.storyboard */; };
-		B265E30A2232CAF40020432B /* Revolut_iOS_Test_ApplicationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B265E3092232CAF40020432B /* Revolut_iOS_Test_ApplicationTests.swift */; };
-		B265E3152232CAF40020432B /* Revolut_iOS_Test_ApplicationUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B265E3142232CAF40020432B /* Revolut_iOS_Test_ApplicationUITests.swift */; };
 		B2C78A722232E6BD000B5AB0 /* CurrencyListDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2C78A712232E6BD000B5AB0 /* CurrencyListDataSource.swift */; };
 		B2C78A752232E9AB000B5AB0 /* CurrencyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2C78A742232E9AB000B5AB0 /* CurrencyTableViewCell.swift */; };
 		B2C78A772232EAB7000B5AB0 /* CurrencyItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2C78A762232EAB7000B5AB0 /* CurrencyItem.swift */; };
@@ -33,29 +34,21 @@
 			remoteGlobalIDString = B265E2F02232CAF00020432B;
 			remoteInfo = "Revolut iOS Test Application";
 		};
-		B265E3112232CAF40020432B /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = B265E2E92232CAF00020432B /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = B265E2F02232CAF00020432B;
-			remoteInfo = "Revolut iOS Test Application";
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		B265E2F12232CAF00020432B /* Revolut iOS Test Application.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Revolut iOS Test Application.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		11CA28952237A02E00F8BBFE /* ApiTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiTests.swift; sourceTree = "<group>"; };
+		11CA289B2237D0FD00F8BBFE /* RateListViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RateListViewControllerTests.swift; sourceTree = "<group>"; };
+		B22A0EBE223E916400FA7E76 /* CurrencyListDelegateTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyListDelegateTests.swift; sourceTree = "<group>"; };
+		B265E2F12232CAF00020432B /* CurrencyConverterApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CurrencyConverterApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B265E2F42232CAF00020432B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B265E2F62232CAF00020432B /* RatesListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatesListViewController.swift; sourceTree = "<group>"; };
 		B265E2F92232CAF00020432B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B265E2FB2232CAF30020432B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B265E2FE2232CAF30020432B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B265E3002232CAF30020432B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		B265E3052232CAF40020432B /* Revolut iOS Test ApplicationTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Revolut iOS Test ApplicationTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		B265E3092232CAF40020432B /* Revolut_iOS_Test_ApplicationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Revolut_iOS_Test_ApplicationTests.swift; sourceTree = "<group>"; };
+		B265E3052232CAF40020432B /* CurrencyConverterAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CurrencyConverterAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B265E30B2232CAF40020432B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		B265E3102232CAF40020432B /* Revolut iOS Test ApplicationUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Revolut iOS Test ApplicationUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		B265E3142232CAF40020432B /* Revolut_iOS_Test_ApplicationUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Revolut_iOS_Test_ApplicationUITests.swift; sourceTree = "<group>"; };
-		B265E3162232CAF40020432B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B2C78A712232E6BD000B5AB0 /* CurrencyListDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyListDataSource.swift; sourceTree = "<group>"; };
 		B2C78A742232E9AB000B5AB0 /* CurrencyTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyTableViewCell.swift; sourceTree = "<group>"; };
 		B2C78A762232EAB7000B5AB0 /* CurrencyItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyItem.swift; sourceTree = "<group>"; };
@@ -82,22 +75,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		B265E30D2232CAF40020432B /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
 		B265E2E82232CAF00020432B = {
 			isa = PBXGroup;
 			children = (
-				B265E2F32232CAF00020432B /* Revolut iOS Test Application */,
-				B265E3082232CAF40020432B /* Revolut iOS Test ApplicationTests */,
-				B265E3132232CAF40020432B /* Revolut iOS Test ApplicationUITests */,
+				B265E2F32232CAF00020432B /* CurrencyConverterApp */,
+				B265E3082232CAF40020432B /* CurrencyConverterAppTests */,
 				B265E2F22232CAF00020432B /* Products */,
 			);
 			sourceTree = "<group>";
@@ -105,14 +90,13 @@
 		B265E2F22232CAF00020432B /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				B265E2F12232CAF00020432B /* Revolut iOS Test Application.app */,
-				B265E3052232CAF40020432B /* Revolut iOS Test ApplicationTests.xctest */,
-				B265E3102232CAF40020432B /* Revolut iOS Test ApplicationUITests.xctest */,
+				B265E2F12232CAF00020432B /* CurrencyConverterApp.app */,
+				B265E3052232CAF40020432B /* CurrencyConverterAppTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		B265E2F32232CAF00020432B /* Revolut iOS Test Application */ = {
+		B265E2F32232CAF00020432B /* CurrencyConverterApp */ = {
 			isa = PBXGroup;
 			children = (
 				B2C78A8422358FC4000B5AB0 /* Extensions.swift */,
@@ -126,25 +110,18 @@
 				B265E2FD2232CAF30020432B /* LaunchScreen.storyboard */,
 				B265E3002232CAF30020432B /* Info.plist */,
 			);
-			path = "Revolut iOS Test Application";
+			path = CurrencyConverterApp;
 			sourceTree = "<group>";
 		};
-		B265E3082232CAF40020432B /* Revolut iOS Test ApplicationTests */ = {
+		B265E3082232CAF40020432B /* CurrencyConverterAppTests */ = {
 			isa = PBXGroup;
 			children = (
-				B265E3092232CAF40020432B /* Revolut_iOS_Test_ApplicationTests.swift */,
+				11CA28952237A02E00F8BBFE /* ApiTests.swift */,
+				11CA289B2237D0FD00F8BBFE /* RateListViewControllerTests.swift */,
+				B22A0EBE223E916400FA7E76 /* CurrencyListDelegateTests.swift */,
 				B265E30B2232CAF40020432B /* Info.plist */,
 			);
-			path = "Revolut iOS Test ApplicationTests";
-			sourceTree = "<group>";
-		};
-		B265E3132232CAF40020432B /* Revolut iOS Test ApplicationUITests */ = {
-			isa = PBXGroup;
-			children = (
-				B265E3142232CAF40020432B /* Revolut_iOS_Test_ApplicationUITests.swift */,
-				B265E3162232CAF40020432B /* Info.plist */,
-			);
-			path = "Revolut iOS Test ApplicationUITests";
+			path = CurrencyConverterAppTests;
 			sourceTree = "<group>";
 		};
 		B2C78A702232D39A000B5AB0 /* Model */ = {
@@ -195,9 +172,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		B265E2F02232CAF00020432B /* Revolut iOS Test Application */ = {
+		B265E2F02232CAF00020432B /* CurrencyConverterApp */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = B265E3192232CAF40020432B /* Build configuration list for PBXNativeTarget "Revolut iOS Test Application" */;
+			buildConfigurationList = B265E3192232CAF40020432B /* Build configuration list for PBXNativeTarget "CurrencyConverterApp" */;
 			buildPhases = (
 				B265E2ED2232CAF00020432B /* Sources */,
 				B265E2EE2232CAF00020432B /* Frameworks */,
@@ -207,14 +184,14 @@
 			);
 			dependencies = (
 			);
-			name = "Revolut iOS Test Application";
+			name = CurrencyConverterApp;
 			productName = "Revolut iOS Test Application";
-			productReference = B265E2F12232CAF00020432B /* Revolut iOS Test Application.app */;
+			productReference = B265E2F12232CAF00020432B /* CurrencyConverterApp.app */;
 			productType = "com.apple.product-type.application";
 		};
-		B265E3042232CAF40020432B /* Revolut iOS Test ApplicationTests */ = {
+		B265E3042232CAF40020432B /* CurrencyConverterAppTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = B265E31C2232CAF40020432B /* Build configuration list for PBXNativeTarget "Revolut iOS Test ApplicationTests" */;
+			buildConfigurationList = B265E31C2232CAF40020432B /* Build configuration list for PBXNativeTarget "CurrencyConverterAppTests" */;
 			buildPhases = (
 				B265E3012232CAF40020432B /* Sources */,
 				B265E3022232CAF40020432B /* Frameworks */,
@@ -225,28 +202,10 @@
 			dependencies = (
 				B265E3072232CAF40020432B /* PBXTargetDependency */,
 			);
-			name = "Revolut iOS Test ApplicationTests";
+			name = CurrencyConverterAppTests;
 			productName = "Revolut iOS Test ApplicationTests";
-			productReference = B265E3052232CAF40020432B /* Revolut iOS Test ApplicationTests.xctest */;
+			productReference = B265E3052232CAF40020432B /* CurrencyConverterAppTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		B265E30F2232CAF40020432B /* Revolut iOS Test ApplicationUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = B265E31F2232CAF40020432B /* Build configuration list for PBXNativeTarget "Revolut iOS Test ApplicationUITests" */;
-			buildPhases = (
-				B265E30C2232CAF40020432B /* Sources */,
-				B265E30D2232CAF40020432B /* Frameworks */,
-				B265E30E2232CAF40020432B /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				B265E3122232CAF40020432B /* PBXTargetDependency */,
-			);
-			name = "Revolut iOS Test ApplicationUITests";
-			productName = "Revolut iOS Test ApplicationUITests";
-			productReference = B265E3102232CAF40020432B /* Revolut iOS Test ApplicationUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
 
@@ -265,13 +224,9 @@
 						CreatedOnToolsVersion = 10.1;
 						TestTargetID = B265E2F02232CAF00020432B;
 					};
-					B265E30F2232CAF40020432B = {
-						CreatedOnToolsVersion = 10.1;
-						TestTargetID = B265E2F02232CAF00020432B;
-					};
 				};
 			};
-			buildConfigurationList = B265E2EC2232CAF00020432B /* Build configuration list for PBXProject "Revolut iOS Test Application" */;
+			buildConfigurationList = B265E2EC2232CAF00020432B /* Build configuration list for PBXProject "CurrencyConverterApp" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -284,9 +239,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				B265E2F02232CAF00020432B /* Revolut iOS Test Application */,
-				B265E3042232CAF40020432B /* Revolut iOS Test ApplicationTests */,
-				B265E30F2232CAF40020432B /* Revolut iOS Test ApplicationUITests */,
+				B265E2F02232CAF00020432B /* CurrencyConverterApp */,
+				B265E3042232CAF40020432B /* CurrencyConverterAppTests */,
 			);
 		};
 /* End PBXProject section */
@@ -303,13 +257,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		B265E3032232CAF40020432B /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		B265E30E2232CAF40020432B /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -341,15 +288,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B265E30A2232CAF40020432B /* Revolut_iOS_Test_ApplicationTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		B265E30C2232CAF40020432B /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				B265E3152232CAF40020432B /* Revolut_iOS_Test_ApplicationUITests.swift in Sources */,
+				11CA28982237A0B800F8BBFE /* ApiTests.swift in Sources */,
+				B22A0EBF223E916400FA7E76 /* CurrencyListDelegateTests.swift in Sources */,
+				11CA289C2237D0FD00F8BBFE /* RateListViewControllerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -358,13 +299,8 @@
 /* Begin PBXTargetDependency section */
 		B265E3072232CAF40020432B /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = B265E2F02232CAF00020432B /* Revolut iOS Test Application */;
+			target = B265E2F02232CAF00020432B /* CurrencyConverterApp */;
 			targetProxy = B265E3062232CAF40020432B /* PBXContainerItemProxy */;
-		};
-		B265E3122232CAF40020432B /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = B265E2F02232CAF00020432B /* Revolut iOS Test Application */;
-			targetProxy = B265E3112232CAF40020432B /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -439,7 +375,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -494,7 +430,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -510,7 +446,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = G7XAPEX3G9;
-				INFOPLIST_FILE = "Revolut iOS Test Application/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/CurrencyConverterApp/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -528,7 +464,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = G7XAPEX3G9;
-				INFOPLIST_FILE = "Revolut iOS Test Application/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/CurrencyConverterApp/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -547,7 +483,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = G7XAPEX3G9;
-				INFOPLIST_FILE = "Revolut iOS Test ApplicationTests/Info.plist";
+				INFOPLIST_FILE = CurrencyConverterAppTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -557,7 +493,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Revolut iOS Test Application.app/Revolut iOS Test Application";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CurrencyConverterApp.app/CurrencyConverterApp";
 			};
 			name = Debug;
 		};
@@ -568,7 +504,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = G7XAPEX3G9;
-				INFOPLIST_FILE = "Revolut iOS Test ApplicationTests/Info.plist";
+				INFOPLIST_FILE = CurrencyConverterAppTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -578,54 +514,14 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Revolut iOS Test Application.app/Revolut iOS Test Application";
-			};
-			name = Release;
-		};
-		B265E3202232CAF40020432B /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = G7XAPEX3G9;
-				INFOPLIST_FILE = "Revolut iOS Test ApplicationUITests/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = "mesropK.Revolut-iOS-Test-ApplicationUITests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = "Revolut iOS Test Application";
-			};
-			name = Debug;
-		};
-		B265E3212232CAF40020432B /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = G7XAPEX3G9;
-				INFOPLIST_FILE = "Revolut iOS Test ApplicationUITests/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = "mesropK.Revolut-iOS-Test-ApplicationUITests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = "Revolut iOS Test Application";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CurrencyConverterApp.app/CurrencyConverterApp";
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		B265E2EC2232CAF00020432B /* Build configuration list for PBXProject "Revolut iOS Test Application" */ = {
+		B265E2EC2232CAF00020432B /* Build configuration list for PBXProject "CurrencyConverterApp" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				B265E3172232CAF40020432B /* Debug */,
@@ -634,7 +530,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		B265E3192232CAF40020432B /* Build configuration list for PBXNativeTarget "Revolut iOS Test Application" */ = {
+		B265E3192232CAF40020432B /* Build configuration list for PBXNativeTarget "CurrencyConverterApp" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				B265E31A2232CAF40020432B /* Debug */,
@@ -643,20 +539,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		B265E31C2232CAF40020432B /* Build configuration list for PBXNativeTarget "Revolut iOS Test ApplicationTests" */ = {
+		B265E31C2232CAF40020432B /* Build configuration list for PBXNativeTarget "CurrencyConverterAppTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				B265E31D2232CAF40020432B /* Debug */,
 				B265E31E2232CAF40020432B /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		B265E31F2232CAF40020432B /* Build configuration list for PBXNativeTarget "Revolut iOS Test ApplicationUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				B265E3202232CAF40020432B /* Debug */,
-				B265E3212232CAF40020432B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

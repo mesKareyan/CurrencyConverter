@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:Revolut iOS Test Application.xcodeproj">
+      location = "self:/Users/mesropkareyan/Desktop/CurrencyConverter/CurrencyConverterApp.xcodeproj">
    </FileRef>
 </Workspace>
