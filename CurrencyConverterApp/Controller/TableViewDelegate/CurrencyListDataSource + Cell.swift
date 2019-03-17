@@ -53,7 +53,7 @@ extension CurrencyListDataSource: CurrencyTableViewCellEditingDelegate {
 		items.insert(oldSelectedItem, at: oldSelectedItemIndex)
 		tableView.insertRows(at: [IndexPath(row: oldSelectedItemIndex, section: 1)], with: .automatic)
 		
-		//scrol to top
+		//scroll to top
 		tableView.selectRow(at: top, animated: true, scrollPosition: .top)
 		tableView.endUpdates()
 		startUpdating()

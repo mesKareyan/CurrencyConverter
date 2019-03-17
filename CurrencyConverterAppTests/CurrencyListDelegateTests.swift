@@ -32,8 +32,7 @@ class CurrencyListDelegateTests: XCTestCase {
 		rateTextField = nil
     }
 	
-	func testThateBecomeFirstResponderIsCalled() {
-		
+	func testThatBecomeFirstResponderIsCalled() {
 		//arrange
 		tableView.reloadData()
 		let indexPath = IndexPath(row: 0, section: 0)
@@ -45,9 +44,8 @@ class CurrencyListDelegateTests: XCTestCase {
 		
 		//assert
 		let textField = cell.rateTextField as! RateTextFiledMock
-		XCTAssert(textField.isBecomeFirstResponderCalled, "Text filed isnt selected")
+		XCTAssertTrue(textField.isBecomeFirstResponderCalled, "Text filed isnt selected")
 	}
-
 }
 
 fileprivate class TableViewDataSourceMock: NSObject, UITableViewDataSource {
@@ -66,7 +64,7 @@ fileprivate class TableViewDataSourceMock: NSObject, UITableViewDataSource {
 
 fileprivate class RateTextFiledMock: UITextField {
 	
-	private (set) var isBecomeFirstResponderCalled: Bool = false
+	private(set) var isBecomeFirstResponderCalled: Bool = false
 	
 	override var canBecomeFirstResponder: Bool {
 		return true

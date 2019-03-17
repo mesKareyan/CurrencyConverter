@@ -49,27 +49,27 @@ class RateListViewControllerTests: XCTestCase {
 	
 	func testThatDataStartReloadingOnWillAppear() {
 		viewController.viewWillAppear(true)
-		XCTAssert(dataProvider.isUpdating, "DataSource didn't start updateing")
+		XCTAssertTrue(dataProvider.isUpdating, "DataSource didn't start updateing")
 	}
 	
 	func testThatDataStopReloadingOnWillDisapper() {
 		viewController.viewWillDisappear(true)
-		XCTAssert(!dataProvider.isUpdating, "DataSource didn't stop updated")
+		XCTAssertFalse(dataProvider.isUpdating, "DataSource didn't stop updated")
 	}
 	
 	func testEndEditing() {
 		viewController.endEditing()
-		XCTAssert(!viewController.view.isFirstResponder, "Editing ended")
+		XCTAssertFalse(viewController.view.isFirstResponder, "Editing ended")
 	}
 	
 	func testKeyboardWillShow() {
 		viewController.keyboardWillShow(notification: Notification(name: Notification.Name(rawValue: "TestNotification")))
-		XCTAssert(viewController.tapToHideKeyboardGesture != nil, "Tap gesture added")
+		XCTAssertNotNil(viewController.tapToHideKeyboardGesture, "Tap gesture added")
 	}
 	
 	func testKeyboardWillHide() {
 		viewController.keyboardWillHide(notification: Notification(name: Notification.Name(rawValue: "TestNotification")))
-		XCTAssert(viewController.tapToHideKeyboardGesture == nil, "Tap gesture removed")
+		XCTAssertNil(viewController.tapToHideKeyboardGesture, "Tap gesture removed")
 	}
 
 }

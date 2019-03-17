@@ -9,9 +9,21 @@
 import Foundation
 
 struct CurrencyItem {
+	
 	var abbreviation: String
 	var rate: Double?
 	var value: Double?
+	
+	func zeroValueItem() -> CurrencyItem {
+		return itemFor(value: 0.0)
+	}
+	
+	func itemFor(value: Double?) -> CurrencyItem {
+		let newValue = value ?? 0.0
+		let currentRate = rate ?? 0.0
+		return CurrencyItem(abbreviation: abbreviation, rate: rate, value: newValue * currentRate)
+	}
+	
 }
 
 extension CurrencyItem: Equatable {

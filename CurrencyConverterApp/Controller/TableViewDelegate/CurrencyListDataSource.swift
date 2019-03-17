@@ -13,7 +13,7 @@ class CurrencyListDataSource: NSObject, CurrencyListProvider {
 	
 	let api: GetCurrencyItemsApi
 	var items: [CurrencyItem] = []
-	private var timer: Timer?
+	private(set) var timer: Timer?
 	weak var tableView:UITableView! {
 		didSet {
 			tableView.dataSource = self
@@ -33,11 +33,11 @@ class CurrencyListDataSource: NSObject, CurrencyListProvider {
 	}
 	
 	func startUpdating() {
-		self.startTimer()
+		startTimer()
 	}
 	
 	func stopUpdating() {
-		self.stopTimer()
+		stopTimer()
 	}
 	
 	private func startTimer() {
@@ -75,19 +75,10 @@ class CurrencyListDataSource: NSObject, CurrencyListProvider {
 	}
 	
 	private func updateData(with items: [CurrencyItem]) {
-		self.items = items.map { item in
-			guard let selectedValue = self.selectedItem?.value, let rate = item.rate else {
-				var item = item
-				item.value = 0.0
-				return item
-			}
-			var item = item
-			item.value = selectedValue * rate
-			return item
-		}
-		//update UI
-		tableView.reloadSections(IndexSet(integer: 1), with: .none)
+		self.items = items.map {$0.itemFor(value: selectedItem?.value)}
+		tableView?.reloadSections(IndexSet(integer: 1), with: .none)
 	}
+	
 }
 
 // MARK: - UITableViewDataSource
