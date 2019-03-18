@@ -103,6 +103,7 @@ fileprivate class GetCurrencyItemsApiMock: GetCurrencyItemsApi {
 	override func getItems(for currency: CurrencyItem, comletion: @escaping CurrencyItemsCompletion) {
 		isGetItemsCalled = true
 		testExpectation.fulfill()
+		testExpectation = nil
 		comletion(.success(with: [CurrencyItem(abbreviation: "TestItem", rate: 1.0, value: 1.0)]))
 	}
 	

@@ -12,6 +12,7 @@
 		B22A0EBF223E916400FA7E76 /* CurrencyListDelegateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B22A0EBE223E916400FA7E76 /* CurrencyListDelegateTests.swift */; };
 		B22A0EC1223EEA7000FA7E76 /* CurrencyListDataSourceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B22A0EC0223EEA7000FA7E76 /* CurrencyListDataSourceTests.swift */; };
 		B22A0EC3223EFB7F00FA7E76 /* CurrecyItemTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B22A0EC2223EFB7E00FA7E76 /* CurrecyItemTests.swift */; };
+		B22A0EC5223F12C100FA7E76 /* CurrencyTableViewCellTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B22A0EC4223F12C100FA7E76 /* CurrencyTableViewCellTests.swift */; };
 		B265E2F52232CAF00020432B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B265E2F42232CAF00020432B /* AppDelegate.swift */; };
 		B265E2F72232CAF00020432B /* RatesListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B265E2F62232CAF00020432B /* RatesListViewController.swift */; };
 		B265E2FA2232CAF00020432B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B265E2F82232CAF00020432B /* Main.storyboard */; };
@@ -44,6 +45,7 @@
 		B22A0EBE223E916400FA7E76 /* CurrencyListDelegateTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyListDelegateTests.swift; sourceTree = "<group>"; };
 		B22A0EC0223EEA7000FA7E76 /* CurrencyListDataSourceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyListDataSourceTests.swift; sourceTree = "<group>"; };
 		B22A0EC2223EFB7E00FA7E76 /* CurrecyItemTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrecyItemTests.swift; sourceTree = "<group>"; };
+		B22A0EC4223F12C100FA7E76 /* CurrencyTableViewCellTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyTableViewCellTests.swift; sourceTree = "<group>"; };
 		B265E2F12232CAF00020432B /* CurrencyConverterApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CurrencyConverterApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B265E2F42232CAF00020432B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B265E2F62232CAF00020432B /* RatesListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatesListViewController.swift; sourceTree = "<group>"; };
@@ -125,6 +127,7 @@
 				11CA289B2237D0FD00F8BBFE /* RateListViewControllerTests.swift */,
 				B22A0EBE223E916400FA7E76 /* CurrencyListDelegateTests.swift */,
 				B22A0EC0223EEA7000FA7E76 /* CurrencyListDataSourceTests.swift */,
+				B22A0EC4223F12C100FA7E76 /* CurrencyTableViewCellTests.swift */,
 				B265E30B2232CAF40020432B /* Info.plist */,
 			);
 			path = CurrencyConverterAppTests;
@@ -298,6 +301,7 @@
 				B22A0EBF223E916400FA7E76 /* CurrencyListDelegateTests.swift in Sources */,
 				11CA289C2237D0FD00F8BBFE /* RateListViewControllerTests.swift in Sources */,
 				B22A0EC3223EFB7F00FA7E76 /* CurrecyItemTests.swift in Sources */,
+				B22A0EC5223F12C100FA7E76 /* CurrencyTableViewCellTests.swift in Sources */,
 				B22A0EC1223EEA7000FA7E76 /* CurrencyListDataSourceTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
