@@ -15,6 +15,7 @@ protocol CurrencyListDelegateProtocol: AnyObject, UITableViewDelegate {
 class CurrencyListDelegate: NSObject, CurrencyListDelegateProtocol {
 	func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
 		if let cell = tableView.cellForRow(at: indexPath) as? CurrencyTableViewCell {
+			tableView.scrollToRow(at: IndexPath(row: 0, section: 0), at: .top, animated: true)
 			cell.rateTextField.becomeFirstResponder()
 		}
 	}

@@ -47,7 +47,7 @@ class CurrencyListDataSource: NSObject, CurrencyListProvider {
 										 selector: #selector(updatingLoop),
 										 userInfo: nil,
 										 repeats: true)
-			RunLoop.current.add(timer!, forMode: RunLoop.Mode.common)
+			RunLoop.current.add(timer!, forMode: RunLoop.Mode.default)
 		}
 	}
 	
@@ -76,7 +76,16 @@ class CurrencyListDataSource: NSObject, CurrencyListProvider {
 	
 	private func updateData(with items: [CurrencyItem]) {
 		self.items = items.map {$0.itemFor(value: selectedItem?.value)}
-		tableView?.reloadSections(IndexSet(integer: 1), with: .none)
+		if tableView.visibleCells.count > 1, var indexPaths = tableView.indexPathsForVisibleRows {
+				indexPaths.removeAll { (indexPath) -> Bool in
+					indexPath.section == 0
+				}
+				tableView.beginUpdates()
+				tableView.reloadRows(at: indexPaths, with: .none)
+				tableView.endUpdates()
+		} else {
+			tableView?.reloadSections(IndexSet(integer: 1), with: .none)
+		}
 	}
 	
 }
