@@ -12,7 +12,6 @@ import XCTest
 var api: Api!
 var sessionUnderTest: URLSession!
 
-
 class ApiTests: XCTestCase {
 
     override func setUp() {
